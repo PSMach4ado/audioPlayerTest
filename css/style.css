@@ -9,7 +9,7 @@ body{
 
 .section{
     margin: auto;
-    width: 850px;
+    max-width: 850px;
     height: 530px;
     margin-top: 50px;
     box-sizing: border-box;
@@ -141,5 +141,18 @@ input[type="range"]::-webkit-slider-thumb{
     width: 15px;
     background: #777;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 850px){
+    
+    .float-left{
+        float: none;
+    }
+
+    .container{
+        margin:auto;
+        margin-top: 10px;
+    }
+
 }
 
