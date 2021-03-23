@@ -8,7 +8,7 @@ function iniciar(){
     music.duration;
 }
 
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", () => {
     if(music.paused){
         music.play();
         playBtn.src = "./assets/pause.png";
@@ -73,10 +73,20 @@ progressBar.addEventListener("mouseup", () => {
 
 let volume_show = document.getElementById("volume");
 let recent_vol = document.getElementById("rangeVol");
-let track = document.createElement("audio");
+let sound_image = document.getElementById("sound");
 
 function volume_change(){
     volume_show.innerHTML = recent_vol.value;
-    track.volume = recent_vol.value / 100;
+    music.volume = recent_vol.value / 100;
+
+    if(music.volume == 0){
+        sound_image.src = "./assets/sound_mute.png";
+    }else{
+        sound_image.src = "./assets/sound.png";
+    }
+
+    if(music.volume > 70){
+        
+    }
     
 }
